@@ -1,0 +1,64 @@
+# Lorenz-96 N=40 training configuration (low-CV control).
+data:
+  system: l96_n40
+  T_train: 200.0
+  T_val: 20.0
+  n_test: 50
+  T_test: 15.0
+  T_long: 200.0
+  tau_factor: 0.5
+  ftle_method: svd
+  gap_T: 5.0
+  ftle_stride: 5
+  lyap_T: 1000.0
+  seed: 0
+model:
+  kind: conv          # periodic 1D conv: L96 is a ring with coupling to sites within +-2,
+  width: 64           # which a kernel-5 convolution represents exactly. A dense 4x256 MLP
+  depth: 5            # failed the readiness check (0.83 T_lambda, lambda_1 1.06 vs 1.71).
+  kernel: 5
+  activation: silu
+  dt_mult: 1
+schedule:
+  name: ss
+  W: 0.5
+  beta: 1.0
+  beta_min_frac: 0.25
+  warmup_frac: 0.10
+  W_min_steps: 5
+  W_max: 2.0
+  bucketing: q4
+  bucket_agg: min
+  loss_norm: inv_W
+  ramp_W0: 0.1
+  K: 3
+  mp_penalty: 1.0
+  mu_floor_quantile: 0.0
+train:
+  n_steps: 50000        # maximum; early stopping normally ends sooner
+  batch_size: 64
+  lr: 0.001
+  lr_min: 0.00001
+  lr_schedule: plateau     # halve lr after plateau_patience stalled validations
+  plateau_factor: 0.5
+  plateau_patience: 5         # validations -> lr halves after 500 stalled steps
+  weight_decay: 0.00001
+  grad_clip: null
+  log_every: 10
+  progress_every: 50
+  val_every: 100
+  segment_log_every: 250
+  segment_log_n: 32
+  ckpt_every: 2000
+  device: auto
+  early_stop_metric: loss_val_halfT
+  early_stop_patience: 20     # validations -> stop after 2000 stalled steps (and >= min_steps)
+  early_stop_min_delta: 0.01
+  min_steps: 15000
+  resume: true
+eval:
+  valid_thresholds: [0.3, 0.5]
+  n_long_rollouts: 3
+  lyap_T: 100.0
+  psd_nperseg: 1024
+  mmd_n: 2000
