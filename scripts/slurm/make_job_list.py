@@ -1,6 +1,6 @@
 """Write the job list (one `train.py` argument string per line) for a system.
 
-The grid is TRAINING_GUIDE.md section 2:
+The default grid is:
   ss      W in {0.1, 0.25, 0.5, 1.0, 2.0}
   const_g beta in {0.5, 1.0, 2.0}
   sat     beta in {0.5, 1.0, 2.0}          (q4 / inv_W)
@@ -22,7 +22,7 @@ grid.add_argument("--readiness", action="store_true", help="three L63 pilot comp
 grid.add_argument("--minimal", action="store_true",
                 help="reduced grid: ss {0.25,0.5,1.0}, const_g/sat {0.5,1.0}, ramp, mpnode K=3 (9 schedules)")
 grid.add_argument("--decisive", action="store_true",
-                help="the reviewer's decisive comparison: ss {0.1,0.25,0.5,1,2}, const_g {0.5,1,2}, "
+                help="the full comparison grid: ss {0.1,0.25,0.5,1,2}, const_g {0.5,1,2}, "
                      "sat capped at tau {0.5,1,2}, sat uncapped (W_max=2 T_lambda) {0.5,1,2}, "
                      "sat capped UNWEIGHTED (per_segment loss) {0.5,1,2}, const_g with the same 0.5 cap {0.5,1,2}, "
                      "ramp, mpnode K {2,3,5} (24 schedules)")

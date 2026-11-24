@@ -10,7 +10,7 @@ Two ways to use this script:
 
 (B) Logged-gradient test (uses existing training logs): provided a JSON
     file of (method, system, W, peak_gradient_norm, beta_estimate) records
-    from your training pipeline, plot ||grad|| vs e^beta and verify the
+    from a training pipeline, plot ||grad|| vs e^beta and verify the
     slope-1 scaling on log-linear axes.
 
 Mode (A) is theorem-direct; mode (B) tests how tightly the bound is realized

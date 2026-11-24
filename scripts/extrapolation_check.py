@@ -1,4 +1,4 @@
-"""Profile-extrapolation diagnostic for the Lorenz-63 training study (Section 5.5).
+"""Profile-extrapolation diagnostic for the Lorenz-63 training study.
 
 Uses the saved Corollary-3 FTLE tables, whose 4000 sample states are identical
 at tau = T/2, T and 2T (checked below). For the nominal saturating schedule

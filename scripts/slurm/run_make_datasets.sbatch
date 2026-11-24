@@ -16,7 +16,7 @@
 
 set -euo pipefail
 module load python
-source $HOME/your_venv/bin/activate    # CHANGE ME
+source $HOME/venv/bin/activate    # CHANGE ME
 cd $SLURM_SUBMIT_DIR
 mkdir -p logs datasets
 CONFIGS=(configs/l63.yaml configs/ks_l22.yaml configs/l96_n40.yaml)

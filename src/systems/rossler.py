@@ -48,7 +48,7 @@ class Rossler(DynamicalSystem):
 
     @property
     def reference_lambda1(self) -> float:
-        return 0.066  # matches the v5 paper's table
+        return 0.066  # numerically estimated
 
     def _generic_ic(self, rng):
         return np.array([1.0, 1.0, 1.0]) + 0.01 * rng.standard_normal(3)

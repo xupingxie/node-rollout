@@ -1,4 +1,4 @@
-"""Training loop with the logging TRAINING_GUIDE.md section 4 requires.
+"""Training loop with per-step and per-segment logging.
 
 Per gradient step (every `log_every`), one JSON line in log.jsonl:
     step, beta_k, W_mean, W_min_batch, W_max_batch, Lambda_max_batch,
@@ -11,7 +11,7 @@ computed by one backward pass per segment on a subsample, so that
 log(grad_norm_i) can be plotted against the nominal teacher proxy Lambda_i
 (exploratory association, not a verification of Lemma 1).
 
-Loss normalization (sat schedule; see paper Section 6.5):
+Loss normalization (sat schedule):
     per_segment : mean_i mse_i
     inv_W       : mean_i (W_bar / W_i) mse_i
     global      : sum_i N_i mse_i / sum_i N_i

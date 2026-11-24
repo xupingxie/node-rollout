@@ -1,7 +1,7 @@
-"""Convert your existing training summary files into the schema that
+"""Convert training summary files into the schema that
 scripts/figures/plot_*.py expects.
 
-You already have these from earlier training work:
+Input files:
 
     ks_pilot_summary.json         (KS pilot, 7 methods, 5 seeds each)
     longtime_stats_summary.json   (L63 long-time stats, 5 methods)
@@ -15,8 +15,6 @@ This script reads them and writes:
 It does NOT regenerate the long-time marginal-density or PSD figures
 (plot_longtime_marginals.py / plot_longtime_psd.py): those need the
 raw rollout trajectories (K, T, 3) arrays, not the summary statistics.
-If you only have the PNG figures from earlier (longtime_marginals.png,
-longtime_psd.png), use those directly --- they're already correct.
 
 USAGE
 -----
@@ -109,7 +107,6 @@ def convert_longtime(in_path: Path, out_path: Path) -> None:
     print("  Note: this is summary statistics, not rollout trajectories.")
     print("  plot_longtime_marginals.py / plot_longtime_psd.py need raw "
           "rollouts and CANNOT be regenerated from this file alone.")
-    print("  Use your existing PNGs from earlier work instead.")
 
 
 def main():

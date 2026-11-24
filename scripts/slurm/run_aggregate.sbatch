@@ -20,7 +20,7 @@
 
 set -euo pipefail
 module load python
-source $HOME/your_venv/bin/activate    # CHANGE ME
+source $HOME/venv/bin/activate    # CHANGE ME
 
 cd $SLURM_SUBMIT_DIR
 mkdir -p plots

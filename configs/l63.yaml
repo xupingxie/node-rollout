@@ -1,4 +1,4 @@
-# Lorenz-63 training configuration (TRAINING_GUIDE.md section 1).
+# Lorenz-63 training configuration.
 data:
   system: l63
   T_train: 200.0      # T_lambda units

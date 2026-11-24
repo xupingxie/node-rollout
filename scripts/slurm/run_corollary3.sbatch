@@ -17,9 +17,9 @@
 set -euo pipefail
 
 # --- environment ---
-# Adjust to your Perlmutter Python environment.
+# Set the Python environment for the cluster.
 module load python
-source $HOME/your_venv/bin/activate    # CHANGE ME (or use conda activate)
+source $HOME/venv/bin/activate    # CHANGE ME (or use conda activate)
 
 # --- run ---
 cd $SLURM_SUBMIT_DIR

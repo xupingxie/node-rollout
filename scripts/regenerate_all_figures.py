@@ -10,8 +10,8 @@ EXPECTED INPUT LAYOUT
         corollary3/results_task{0..3}.json     (from test_corollary3.py)
         proposition4/results_task{0..3}.json   (from test_proposition4.py)
         lemma1/tangent_task{0..3}.json         (from test_lemma1.py --mode tangent)
-        l63_ablation/summary.json              (from your L63 training pipeline)
-        ks_pilot/summary.json                  (from your KS pilot training)
+        l63_ablation/summary.json              (L63 ablation training summary)
+        ks_pilot/summary.json                  (KS training summary)
         longtime/
             reference.json                      (ground-truth L63 rollout)
             *.json                              (one per method, long rollouts)

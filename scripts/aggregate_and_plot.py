@@ -1,12 +1,12 @@
 """Aggregate and plot results from theorem-verification tests.
 
-Generates the figures referenced by the v5 paper's [TODO] placeholders:
+Generates the figures of the numerical checks:
 
-  Figure (sec 6.2): Coverage ratio vs CV across the four systems, with the
+  Corollary 3:      Coverage ratio vs CV across the four systems, with the
                     CV^2 lower bound (Corollary 3) overlaid.
-  Figure (sec 6.3): Lambda(W) running integrals across systems (tangent mode)
+  Lemma 1:          Lambda(W) running integrals across systems (tangent mode)
                     or log(grad_norm) vs beta scatter (logs mode).
-  Figure (sec 6.4): Coverage loss vs sigma_eps with the 2 eps sum 1/L_i bound.
+  Proposition 4:    Coverage loss vs sigma_eps with the 2 eps sum 1/L_i bound.
 
 Usage:
     python scripts/aggregate_and_plot.py \

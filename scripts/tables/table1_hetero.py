@@ -16,9 +16,8 @@ USAGE
 
 OUTPUT
 ------
-A LaTeX `tabular` body (no \begin{table}/\end{table} wrapping) that
-you can \input{} into the paper, replacing the hand-written contents
-of tab:hetero.
+A LaTeX `tabular` body (no \begin{table}/\end{table} wrapping) for
+\input{} into a table environment.
 """
 import argparse
 import json

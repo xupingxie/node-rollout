@@ -1,6 +1,6 @@
 # Kuramoto-Sivashinsky L=22, N=64 training configuration.
 # Periodic conv field (translation-equivariant); switch to kind: mlp,
-# width: 512 for the MLP variant in TRAINING_GUIDE.md.
+# width: 512 for the MLP variant.
 data:
   system: ks_l22
   T_train: 200.0

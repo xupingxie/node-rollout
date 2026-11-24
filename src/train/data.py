@@ -16,10 +16,7 @@ long post-transient orbit, separated by gaps of `gap_T` Lyapunov times:
     [burn-in] [train] gap [val] gap [ref_long] gap [test_0] gap [test_1] ...
 
 so no state appears in more than one piece. `check_disjoint` verifies this
-by exact row comparison and `make_dataset` asserts it. (An earlier version
-sampled the starting points 20 T_lambda apart along the orbit and then
-integrated 200 T_lambda from each, which made validation and several test
-trajectories sub-intervals of the training trajectory.)
+by exact row comparison and `make_dataset` asserts it.
 
 Teacher FTLE. By default the defined largest FTLE,
 log sigma_max(D phi^tau)/tau, from the full tangent matrix

@@ -2,7 +2,7 @@
 
 Every policy maps (step, teacher rates mu for the batch) -> per-segment
 horizons W_i in time units, plus an info dict for logging. The trainer
-converts W_i to solver steps. Five families, matching TRAINING_GUIDE.md:
+converts W_i to solver steps. Five families:
 
   ss       constant window W                        (class baseline, budget sweep)
   const_g  W_g^max(beta_k) = beta_k / max_i mu_i    (the matched-budget baseline
@@ -90,7 +90,7 @@ class Saturating(Policy):
                 if m.any():
                     # `min` keeps every member of the bucket inside its own
                     # budget (Lambda_i = mu_i W_bucket <= mu_i W_i <= beta);
-                    # `mean` (the old pilots' choice) gives the high-mu
+                    # `mean` gives the high-mu
                     # members more than beta and breaks budget matching.
                     Wb[m] = agg(W[m])
             W = Wb

@@ -17,9 +17,9 @@ TAUS = ("0.5", "1.0", "2.0")
 def numerical_source(source):
     """Launcher-only updates do not change CPU numerical experiments.
 
-    Also projects old v12r1 broad fingerprints onto the same keys, so completed
-    datasets/direct experiments survive this operational update. Commands and
-    every remaining source hash must still match.
+    Also projects broad v12r1 fingerprints onto the same keys, so completed
+    datasets and direct experiments stay valid. Commands and every remaining
+    source hash must still match.
     """
     return {key: value for key, value in source.items()
             if not key.startswith("scripts/slurm/") and key != "scripts/cpu_stage.py"}

@@ -1,15 +1,10 @@
 """Generate fig_grad_norm_bar.png: final gradient norm per method, on
 L63 and KS, as a two-panel bar chart.
 
-This is a REPLACEMENT for fig_grad_norm_trajectory.png. The original
-trajectory figure showed gradient norm vs training epoch for 4 methods;
-the per-epoch time series was not saved during the original training,
-so it cannot be regenerated. This bar chart uses the FINAL gradient
-norms (one number per method) which ARE preserved in
-data/l63_ablation_summary.json and data/ks_pilot_summary.json. It
-makes the same scientific point: schedule classes operate at
-systematically different effective beta, manifesting as systematically
-different gradient norms.
+This bar chart uses the final gradient norms (one number per method)
+from data/l63_ablation_summary.json and data/ks_pilot_summary.json.
+Schedule classes operate at systematically different effective beta,
+which shows up as systematically different gradient norms.
 
 EXPECTED INPUTS
 ---------------
@@ -51,7 +46,7 @@ def load_l63(path: Path):
     """Return list of (label, class, grad_mean, grad_std)."""
     with open(path) as f:
         records = json.load(f)
-    # Pick the headline 4 configs that appear in Figure 3 of the paper
+    # Pick 4 representative configs
     wanted = [
         ("single_shoot_W=0.30", "Single-shoot W=0.30"),
         ("MP-NODE (3x0.30)",    "MP-NODE 3x0.30"),

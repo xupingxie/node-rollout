@@ -1,5 +1,5 @@
 #!/bin/bash
-# Run inside an allocated compute node; see TRAINING_GUIDE.md section 13.
+# Run inside an allocated compute node.
 set -euo pipefail
 export OMP_NUM_THREADS=${OMP_NUM_THREADS:-2}
 export OPENBLAS_NUM_THREADS=${OPENBLAS_NUM_THREADS:-2}

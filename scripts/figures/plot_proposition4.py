@@ -10,9 +10,7 @@ Directory of `results_task{0,1,2,3}.json` files from
 `scripts/test_proposition4.py` runs. The Proposition 4 outputs share
 the naming convention with Corollary 3 outputs, distinguished by the
 extra fields `sigma_eps`, `epsilon`, `coverage_loss_max`,
-`theoretical_bound`, `feasibility_fraction_min`. In your project the
-Proposition 4 files have suffix `__1_`; if that's the case, point this
-script at the directory containing those files.
+`theoretical_bound`, `feasibility_fraction_min`.
 
 USAGE
 -----

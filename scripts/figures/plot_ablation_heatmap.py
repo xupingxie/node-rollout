@@ -32,9 +32,6 @@ Plus an optional record for the global Lyapunov baseline:
 Bucketing levels (rows, top-to-bottom): "exact", "q16", "q4"
 Loss-norm levels (cols, left-to-right): "global", "per_segment", "inv_W"
 
-If you don't have this file but have the numbers from Table 5, you can
-write it by hand in a few minutes.
-
 USAGE
 -----
     python scripts/figures/plot_ablation_heatmap.py \

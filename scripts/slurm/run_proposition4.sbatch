@@ -14,7 +14,7 @@
 set -euo pipefail
 
 module load python
-source $HOME/your_venv/bin/activate    # CHANGE ME
+source $HOME/venv/bin/activate    # CHANGE ME
 
 cd $SLURM_SUBMIT_DIR
 mkdir -p logs ${OUT_ROOT:-results}/proposition4
@@ -30,7 +30,7 @@ python scripts/test_proposition4.py \
     --noise uniform \
     --out_dir ${OUT_ROOT:-results}/proposition4
 
-# stress test with a 2-sigma gaussian calibration (the v11 setting), separate output files
+# stress test with a 2-sigma gaussian calibration, separate output files
 python scripts/test_proposition4.py \
     --task_id $SLURM_ARRAY_TASK_ID \
     --systems l63 rossler l96_n40 ks_l22 \

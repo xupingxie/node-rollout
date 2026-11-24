@@ -2,7 +2,7 @@
 
 Writes one .tex file per table into the output directory. Each file
 contains a `\\begin{tabular}` ... `\\end{tabular}` body that can be
-\\input{}'d from the paper, replacing the hand-written contents.
+\\input{}'d from the paper.
 
 The Corollary 3 / Proposition 4 / Lemma 1 tables read from
 results/{corollary3,proposition4,lemma1}/ produced by the theorem-
@@ -96,7 +96,7 @@ def main():
         results["table4_prop4"] = False
         print(f"\nSKIPPED table 4: {prop} not found")
 
-    # Tables 5, 6, 7, 8, 9: from bundled data/
+    # Tables 5, 6, 7, 8, 9: from data/
     if args.data_dir.exists():
         ok = run([
             str(SCRIPT_DIR / "tables_training.py"),

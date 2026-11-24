@@ -170,7 +170,7 @@ class KuramotoSivashinsky(DynamicalSystem):
         return self._etdrk4_step(x, dt)
 
     # ----------------------------------------------------------------------
-    # JOINT ETDRK4 step (state + tangent). This is the critical fix.
+    # JOINT ETDRK4 step (state + tangent).
     # ----------------------------------------------------------------------
     def tangent_step(self, x, v, dt, t=0.0):
         """JOINT ETDRK4 step on state + tangent.

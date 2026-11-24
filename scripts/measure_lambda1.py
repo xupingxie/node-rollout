@@ -7,7 +7,7 @@ steps, and average log(stretch)/dt over the whole run.
 This is the script that produces the lambda_1 values used to set
 `reference_lambda1` in each src/systems/*.py file (currently hardcoded
 to literature-or-empirical values). Running this script verifies that
-the hardcoded values are correct for your dt, integrator, and
+the hardcoded values are correct for the chosen dt, integrator, and
 attractor sampling.
 
 The reported value is asymptotic (the FTLE at infinite tau converges

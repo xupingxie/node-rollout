@@ -47,7 +47,7 @@ class Lorenz63(DynamicalSystem):
 
     @property
     def reference_lambda1(self) -> float:
-        return 0.866  # numerically estimated; matches the v5 paper's table
+        return 0.866  # numerically estimated
 
     def _generic_ic(self, rng):
         # A point near (but not on) the attractor; long burn-in handles the rest.

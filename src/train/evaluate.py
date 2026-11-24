@@ -3,7 +3,7 @@
 valid_time: first time at which NRMSE(t) = ||x_pred - x_true|| / ||std||
 exceeds the threshold, evaluated at EVERY solver step over n_test
 independent test trajectories. Reported in units of T_lambda. Evaluating
-every k-th step is what produced the quantized values in the old pilots.
+only every k-th step would quantize the reported values.
 
 long_time_stats: n_long rollouts of T_long from attractor ICs;
   - marginal_mmd : RBF-kernel MMD^2 between per-coordinate marginals of

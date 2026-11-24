@@ -1,6 +1,6 @@
 """Generate fig_cross_verification.png from theorem-verification JSON.
 
-This is a bonus figure that connects Corollary 3 and Lemma 1: the
+This figure connects Corollary 3 and Lemma 1: the
 coefficient of variation CV(FTLE) measured from the Corollary 3
 verification correlates very tightly (Pearson r ~ 0.96) with the
 trajectory-to-trajectory standard deviation of Lambda(T_lambda)

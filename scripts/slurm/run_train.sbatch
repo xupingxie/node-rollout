@@ -27,7 +27,7 @@
 set -euo pipefail
 JOBFILE=${1:?usage: sbatch run_train.sbatch <jobfile>}
 
-module load pytorch                     # Perlmutter PyTorch module (or activate your env)
+module load pytorch                     # Perlmutter PyTorch module (or activate a Python environment)
 export OMP_NUM_THREADS=${SLURM_CPUS_PER_TASK}
 
 cd $SLURM_SUBMIT_DIR

@@ -46,7 +46,7 @@ class ScheduleConfig:
     W_min_steps: int = 5
     W_max: float = 2.0            # T_lambda
     bucketing: str = "q4"         # q4 | q16 | none (sat only)
-    bucket_agg: str = "min"       # min (budget-feasible) | mean (old pilots; violates budget)
+    bucket_agg: str = "min"       # min (budget-feasible) | mean (violates budget)
     loss_norm: str = "inv_W"      # inv_W | per_segment | global
     ramp_W0: float = 0.1          # ramp: from ramp_W0 to W over training
     K: int = 3                    # mpnode sub-windows
